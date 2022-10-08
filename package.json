@@ -1,0 +1,18 @@
+{
+  "name": "fluent-regular-icons",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf ./src/icons",
+    "optimize": "svgo -f ./icons -o src/icons --config svgo.config.js",
+    "generate": "mkdir -p fonts && node src/generate.js",
+    "build": "run-s clean optimize generate clean"
+  },
+  "devDependencies": {
+    "fantasticon": "^1.2.3",
+    "fast-glob": "^3.2.12",
+    "npm-run-all": "^4.1.5",
+    "svgo": "^2.8.0"
+  }
+}
